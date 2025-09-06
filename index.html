@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Firma — Inversión Sistemática</title>
+  <meta name="description" content="Firma de inversión cuantitativa. Página corporativa minimalista con navegación simple." />
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --fg: #e9e9ec;
+      --muted: #a9abb3;
+      --accent: #b9ff66;
+      --card: #151517;
+      --border: #2a2b2f;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--fg); line-height: 1.6;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    /* Header */
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(8px);
+      background: rgba(15,15,16,0.6);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { max-width: 980px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-weight: 700; letter-spacing: 0.2px; }
+    .brand small { color: var(--muted); font-weight: 500; font-size: 0.8rem; margin-left: 8px; }
+    .links a { color: var(--fg); text-decoration: none; margin-left: 18px; font-size: 0.95rem; opacity: .85; }
+    .links a:hover { opacity: 1; }
+
+    /* Sections */
+    section { max-width: 980px; margin: 0 auto; padding: 64px 20px; }
+    .hero { padding: 96px 20px 72px; text-align: center; }
+    .eyebrow { color: var(--muted); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; margin: 14px 0 10px; }
+    .lede { color: var(--muted); max-width: 720px; margin: 0 auto; font-size: 1.05rem; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    .card h3 { margin: 6px 0 8px; font-size: 1rem; }
+    .list { margin: 0; padding-left: 18px; color: var(--muted); }
+
+    .kicker { display: inline-block; border: 1px solid var(--border); padding: 8px 12px; border-radius: 10px; margin-top: 22px; color: var(--muted); }
+
+    /* Address */
+    .address { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+    .address .card p { margin: 6px 0; color: var(--muted); }
+
+    /* Contact */
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    form .full { grid-column: 1 / -1; }
+    label { display: block; font-size: .9rem; margin-bottom: 6px; color: var(--muted); }
+    input, select, textarea { width: 100%; padding: 10px 12px; background: #0f0f11; color: var(--fg); border: 1px solid var(--border); border-radius: 10px; }
+    textarea { min-height: 120px; resize: vertical; }
+    button { background: var(--fg); color: #0b0b0c; border: none; padding: 12px 16px; border-radius: 12px; font-weight: 700; cursor: pointer; }
+    button:hover { filter: brightness(.95); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); color: var(--muted); }
+    .footer-inner { max-width: 980px; margin: 0 auto; padding: 24px 20px; display: grid; gap: 6px; }
+    .legal a { color: var(--muted); text-decoration: none; }
+
+    /* Small screens */
+    @media (max-width: 640px) {
+      form { grid-template-columns: 1fr; }
+      .links a { margin-left: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" role="navigation" aria-label="principal">
+    <div class="nav-inner">
+      <div class="brand">Tu Firma <small>Inversión Sistemática</small></div>
+      <nav class="links">
+        <a href="#about">Sobre</a>
+        <a href="#careers">Carreras</a>
+        <a href="#benefits">Beneficios</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">Investigación + Ingeniería</div>
+      <h1>Diseñamos y ejecutamos programas de inversión cuantitativos.</h1>
+      <p class="lede">Empleamos métodos matemáticos y estadísticos para modelar mercados globales. Cultura de colaboración, disciplina e investigación intensa.</p>
+      <div class="kicker" aria-hidden="true">Est. 20XX • ~50 personas • Madrid / Remoto</div>
+    </section>
+
+    <section id="about">
+      <h2>Sobre nosotros</h2>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <h3>Fundación</h3>
+          <ul class="list">
+            <li>Fundada en 20XX, registrada conforme a normativa aplicable.</li>
+            <li>Compromiso de coinversión significativa del equipo.</li>
+          </ul>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Equipo</h3>
+          <ul class="list">
+            <li>Investigadores y desarrolladores en matemáticas, física e informática.</li>
+            <li>Tenencia media elevada y cultura técnica exigente.</li>
+          </ul>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Marco</h3>
+          <ul class="list">
+            <li>Modelos estadísticos, DL (Transformers) y ejecución sistemática.</li>
+            <li>Riesgo y control independientes, mejora continua.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="careers">
+      <h2>Carreras</h2>
+      <p class="lede">Buscamos personas curiosas con bases sólidas en probabilidad, optimización, programación (Python) y sistemas.</p>
+      <div class="cards">
+        <div class="card"><h3>Puestos</h3><p class="muted">Investigación cuantitativa, Ingeniería ML, Infra de datos/Trading.</p></div>
+        <div class="card"><h3>Proceso</h3><p class="muted">Desafíos técnicos, estudio de casos y entrevista con el equipo.</p></div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <h2>Beneficios</h2>
+      <div class="cards">
+        <div class="card"><h3>Compensación</h3><p class="muted">Salario competitivo y plan de incentivos.</p></div>
+        <div class="card"><h3>Bienestar</h3><p class="muted">Seguro médico/vida, comedor, flexibilidad.</p></div>
+        <div class="card"><h3>Desarrollo</h3><p class="muted">Formación, matching solidario y participación en fondos (según requisitos).</p></div>
+      </div>
+    </section>
+
+    <section id="locations">
+      <h2>Ubicaciones</h2>
+      <div class="address">
+        <div class="card">
+          <h3>Madrid</h3>
+          <p>C/ Ejemplo 123, 28000 Madrid</p>
+          <p>+34 600 000 000</p>
+        </div>
+        <div class="card">
+          <h3>Long Island</h3>
+          <p>East Setauket, NY</p>
+          <p>+1 (631) 000-0000</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contacto</h2>
+      <p class="lede">Consultas generales. Para <strong>carreras</strong>, usa la sección anterior.</p>
+      <form action="#" method="post" novalidate>
+        <div>
+          <label for="topic">Tema</label>
+          <select id="topic" name="topic" required>
+            <option value="inversion">Inversión</option>
+            <option value="prensa">Prensa</option>
+            <option value="otro" selected>Otro</option>
+          </select>
+        </div>
+        <div>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" autocomplete="name" required />
+        </div>
+        <div class="full">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="full">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Cuéntanos brevemente tu consulta…"></textarea>
+        </div>
+        <div class="full">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="y"></span> Tu Firma. Todos los derechos reservados.</div>
+      <div class="legal">Políticas de privacidad · Aviso legal · <a href="#">FINRA BrokerCheck</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
